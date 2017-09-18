@@ -1,2 +1,3 @@
-target/
-.idea/
+Junior_Developer/.idea/
+Junior_Developer/target/
+*/.idea/*
