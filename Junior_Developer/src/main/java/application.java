@@ -9,9 +9,10 @@ public class application {
         System.out.println("===================================================");
         events.printCalendar();
 
-        System.out.println("Avaliable Actions: ");
+        System.out.println("Available Actions: ");
         System.out.println("1 - Add an event");
         System.out.println("2 - Delete an event");
+        System.out.println("3 - Display current events");
 
         switch(IOUtil.readInput("What would you like to do?")) {
             case "1":
@@ -19,6 +20,9 @@ public class application {
                 break;
             case "2":
                 events.deleteEvent(IOUtil.readInput("Event ID: "));
+                break;
+            case "3":
+                events.printCalendar();
                 break;
         }
     }

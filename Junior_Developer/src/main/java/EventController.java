@@ -9,21 +9,27 @@ public class EventController {
     private static Map<String, Event>  calendar = new HashMap<>();
 
     public String printCalendar() {
-        StringBuilder sb = new StringBuilder();
-        String nl = System.lineSeparator();
         if(calendar.size() == 0) {
-            sb.append("You currently have no events on your calendar");
-        } else {
-            sb.append("You currently have ").append(calendar.size()).append("events").append(nl);
-            for(Event event : calendar.values()) {
-                sb.append( event.entry()).append(nl);
-            }
+            return "You currently have no events on your calendar";
+        }
+        return getCalenderEvents();
+    }
+
+    private String getCalenderEvents() {
+        String nl = System.lineSeparator();
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("You currently have ").append(calendar.size()).append("events : ").append(nl);
+
+        for(Event event : calendar.values()) {
+            sb.append( event.entry())
+               .append(nl);
         }
         return sb.toString();
     }
 
     public void addEvent() {
-        String unqiueId = Integer.toString(calendar.size() + 1);
+        String uniqueId = Integer.toString(calendar.size() + 1);
         String title;
         int year, month, day;
 
@@ -32,7 +38,7 @@ public class EventController {
         year = Integer.parseInt(IOUtil.readInput("> What year is this event to take place?"));
         month = Integer.parseInt(IOUtil.readInput("> What month is this event to take place?"));
         day = Integer.parseInt(IOUtil.readInput("> What day is this event to take place?"));
-        calendar.put(unqiueId, new Event(unqiueId, title, LocalDateTime.of(year, month, day, 0, 0)));
+        calendar.put(uniqueId, new Event(uniqueId, title, LocalDateTime.of(year, month, day, 0, 0)));
     }
 
     public void deleteEvent(String eventId) {

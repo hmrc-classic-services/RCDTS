@@ -25,6 +25,24 @@ public class Event {
         return sb.toString();
     }
 
+    public boolean isAfter(Event event) {
+        if(event.getDateTime().isAfter(this.dateTime)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isBefore(Event event) {
+        if( event.getDateTime().isBefore(this.dateTime)) {
+            return true;
+        }
+        return false;
+    }
+
+    public void addAttendee(User guest) {
+        attendees.add(guest);
+    }
+
     public String getEventId() {
         return eventId;
     }
