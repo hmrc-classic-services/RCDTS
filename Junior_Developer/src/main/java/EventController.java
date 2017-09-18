@@ -1,8 +1,6 @@
-import Model.Event;
-import Model.User;
-import Util.IOUtil;
+import model.Event;
+import util.IOUtil;
 
-import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -31,14 +29,12 @@ public class EventController {
 
     public void addEvent() {
         String uniqueId = Integer.toString(calendar.size() + 1);
-        String title;
-        int year, month, day;
 
         System.out.println(">> Adding event");
-        title = IOUtil.readInput("> What is the title you wish to provide for this event?");
-        year = Integer.parseInt(IOUtil.readInput("> What year is this event to take place?"));
-        month = Integer.parseInt(IOUtil.readInput("> What month is this event to take place?"));
-        day = Integer.parseInt(IOUtil.readInput("> What day is this event to take place?"));
+        String title = IOUtil.readInput("> What is the title you wish to provide for this event?");
+        int year = Integer.parseInt(IOUtil.readInput("> What year is this event to take place?"));
+        int month = Integer.parseInt(IOUtil.readInput("> What month is this event to take place?"));
+        int day = Integer.parseInt(IOUtil.readInput("> What day is this event to take place?"));
         calendar.put(uniqueId, new Event(uniqueId, title, LocalDateTime.of(year, month, day, 0, 0)));
     }
 

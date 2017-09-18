@@ -1,7 +1,7 @@
-package Model;
+package model;
 
 
-import Util.IOUtil;
+import util.IOUtil;
 
 import java.time.LocalDateTime;
 import java.util.List;

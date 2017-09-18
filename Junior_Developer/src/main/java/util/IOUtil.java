@@ -1,4 +1,4 @@
-package Util;
+package util;
 
 import java.io.Console;
 import java.time.LocalDateTime;
