@@ -19,7 +19,7 @@ public class IOUtilTest {
 
     @Test
     public void test_DateAsString_NoTime() {
-        LocalDateTime ldt = LocalDateTime.of(1994, 5, 18, 11, 59);
+        LocalDateTime ldt = LocalDateTime.of(1994, 5, 18, 16, 36);
         String result = IOUtil.DateAsString(ldt, false);
         assertEquals("18-05-1994 11:59", result);
     }

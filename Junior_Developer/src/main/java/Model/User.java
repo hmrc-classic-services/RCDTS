@@ -33,4 +33,6 @@ public class User {
     public void setCredit(double credit) {
         this.credit = credit;
     }
+
+    public void addCredit(double credit) { this.credit += credit;}
 }

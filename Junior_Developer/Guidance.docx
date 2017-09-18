@@ -22,5 +22,5 @@ Task 2:
 Task 3:
 	GIVEN I am an ORGANISER
 	WHEN I add an EVENT, I want to be asked what kind of event it is
-	AND I want the options to be CHARITY, SOCIAL, PRIVATE, PUBLIC
+	AND I want the options to be SOCIAL, PRIVATE or PUBLIC
  	THEN the event is saved

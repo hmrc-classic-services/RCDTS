@@ -1,9 +1,10 @@
 import Model.Event;
+import Model.User;
 import Util.IOUtil;
 
+import java.lang.reflect.Array;
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class EventController {
     private static Map<String, Event>  calendar = new HashMap<>();
@@ -43,5 +44,14 @@ public class EventController {
 
     public void deleteEvent(String eventId) {
         calendar.remove(eventId);
+    }
+
+    public List<Integer> randomNumbers() {
+        ArrayList<Integer> randomNumbers = new ArrayList<>();
+        Random random = new Random();
+        for(int i = 0; i < 10; i ++ ) {
+            randomNumbers.add( random.nextInt(20));
+        }
+        return randomNumbers;
     }
 }
