@@ -41,13 +41,4 @@ public class EventController {
     public void deleteEvent(String eventId) {
         calendar.remove(eventId);
     }
-
-    public List<Integer> randomNumbers() {
-        ArrayList<Integer> randomNumbers = new ArrayList<>();
-        Random random = new Random();
-        for(int i = 0; i < 10; i ++ ) {
-            randomNumbers.add( random.nextInt(20));
-        }
-        return randomNumbers;
-    }
 }

@@ -1,6 +1,6 @@
-import Util.IOUtil;
+import util.IOUtil;
 
-public class application {
+public class Application {
     static EventController events = new EventController();
 
     public static void main(String[] args) {
