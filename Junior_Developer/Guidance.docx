@@ -10,7 +10,7 @@ General Guidance:
 Task 1:
 	GIVEN I am an ORGANISER
 	WHEN viewing events
-	THEN I can want to see only future events
+	THEN I want to see only future events
 
 
 Task 2:
