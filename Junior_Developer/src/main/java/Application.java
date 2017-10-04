@@ -1,7 +1,7 @@
 import util.IOUtil;
 
 public class Application {
-    static EventController events = new EventController();
+    private static EventController events = new EventController();
 
     public static void main(String[] args) {
         System.out.println("===================================================");

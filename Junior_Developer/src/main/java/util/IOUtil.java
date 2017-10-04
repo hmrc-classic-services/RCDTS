@@ -30,14 +30,4 @@ public class IOUtil {
         return input;
     }
 
-    public static String DateAsString(LocalDateTime dateTime, boolean includeTime) {
-        DateTimeFormatter formatter = null;
-        if (includeTime) {
-            formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
-        } else {
-            formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        }
-        return dateTime.format(formatter);
-    }
-
 }

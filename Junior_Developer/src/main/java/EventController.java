@@ -2,6 +2,7 @@ import model.Event;
 import util.IOUtil;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class EventController {
@@ -32,10 +33,9 @@ public class EventController {
 
         System.out.println(">> Adding event");
         String title = IOUtil.readInput("> What is the title you wish to provide for this event?");
-        int year = Integer.parseInt(IOUtil.readInput("> What year is this event to take place?"));
-        int month = Integer.parseInt(IOUtil.readInput("> What month is this event to take place?"));
-        int day = Integer.parseInt(IOUtil.readInput("> What day is this event to take place?"));
-        calendar.put(uniqueId, new Event(uniqueId, title, LocalDateTime.of(year, month, day, 0, 0)));
+        String date = IOUtil.readInput("> Enter the date of your event (dd/mm/yyyy): ").trim();
+        String time = IOUtil.readInput("> Enter the time of your event (hh:mm): ").trim();
+        calendar.put(uniqueId, new Event(uniqueId, title, LocalDateTime.parse(date + time, DateTimeFormatter.ofPattern("dd/MM/yyyyHH:mm"))));
     }
 
     public void deleteEvent(String eventId) {

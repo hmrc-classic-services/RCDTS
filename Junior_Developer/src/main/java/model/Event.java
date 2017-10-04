@@ -1,6 +1,7 @@
 package model;
 
 
+import util.DateUtil;
 import util.IOUtil;
 
 import java.time.LocalDateTime;
@@ -10,8 +11,6 @@ public class Event {
     private final String eventId;
     private String eventName;
     private LocalDateTime dateTime;
-    private String description;
-    private List<User> attendees;
 
     public Event(String eventId, String eventName, LocalDateTime dateTime) {
         this.eventId = eventId;
@@ -21,7 +20,7 @@ public class Event {
 
     public String entry() {
         StringBuilder sb = new StringBuilder();
-        sb.append("[").append(eventId).append("]").append(eventName).append(" : ").append(IOUtil.DateAsString(dateTime,true));
+        sb.append("[").append(eventId).append("]").append(eventName).append(" : ").append(DateUtil.dateAsString(dateTime));
         return sb.toString();
     }
 
@@ -37,10 +36,6 @@ public class Event {
             return true;
         }
         return false;
-    }
-
-    public void addAttendee(User guest) {
-        attendees.add(guest);
     }
 
     public String getEventId() {
@@ -61,21 +56,5 @@ public class Event {
 
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public List<User> getAttendees() {
-        return attendees;
-    }
-
-    public void setAttendees(List<User> attendees) {
-        this.attendees = attendees;
     }
 }
