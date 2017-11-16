@@ -28,14 +28,10 @@ public class EventController {
         return sb.toString();
     }
 
-    public void addEvent() {
+    public void addEvent(String title, String date, String time) {
         String uniqueId = Integer.toString(calendar.size() + 1);
-
-        System.out.println(">> Adding event");
-        String title = IOUtil.readInput("> What is the title you wish to provide for this event?");
-        String date = IOUtil.readInput("> Enter the date of your event (dd/mm/yyyy): ").trim();
-        String time = IOUtil.readInput("> Enter the time of your event (hh:mm): ").trim();
-        calendar.put(uniqueId, new Event(uniqueId, title, LocalDateTime.parse(date + time, DateTimeFormatter.ofPattern("dd/MM/yyyyHH:mm"))));
+        LocalDateTime dateTime = LocalDateTime.parse(date + time, DateTimeFormatter.ofPattern("dd/MM/yyyyHH:mm"));
+        calendar.put(uniqueId, new Event(uniqueId, title, dateTime));
     }
 
     public void deleteEvent(String eventId) {
