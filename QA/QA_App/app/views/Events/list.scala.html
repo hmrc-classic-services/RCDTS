@@ -1,8 +1,8 @@
 @import model.Event
 @import scala.collection.mutable.HashMap
-@(implicit headers : Seq[String], data : HashMap[Long, Event])
+@(implicit headers : Seq[String], data : HashMap[Long, Event], id : String = "eventList")
 <div class="form-group">
-<table>
+<table id="@id">
     <thead>
     <tr>
         @for(header <- headers) {
