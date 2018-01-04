@@ -1,3 +1,5 @@
 Junior_Developer/.idea/
 Junior_Developer/target/
 */.idea/*
+./idea/
+.idea/*
