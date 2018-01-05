@@ -30,4 +30,6 @@ object EventOrganiser {
     }
   }
   def getEvents() = {  events  }
+
+  def clear() = { events.clear() }
 }
