@@ -30,7 +30,7 @@ class ScalaFeatureSpecWithTable extends FeatureSpec with TestSetup with GivenWhe
         submit()
 
         Then("the user is taken to the home page with the event details visible")
-        currentUrl.split("\\?")(0) shouldBe host
+        currentUrl.split("\\?")(0) shouldBe host + "8080808080"
         val table = webDriver.findElement(By.id("eventList")).getText
         table contains eventName shouldBe true
         table contains transformed(eventDate) shouldBe true

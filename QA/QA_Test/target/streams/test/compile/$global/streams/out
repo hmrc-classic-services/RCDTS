@@ -1,7 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/gandrews/Applications/hmrc-development-environment/hmrc/Testing/QA/QA_Test/src/test/scala/ScalaFeatureSpecWithTable.scala:22:68: ')' expected but string literal found.[0m
-[0m[[0m[31merror[0m] [0m[0m        When(s"the user fills out the details for the \"$eventName\"")[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                   ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/gandrews/Applications/hmrc-development-environment/hmrc/Testing/QA/QA_Test/src/test/scala/ScalaFeatureSpecWithTable.scala:31:61: ';' expected but ')' found.[0m
-[0m[[0m[31merror[0m] [0m[0m        val table = webDriver.findElement(By.id("eventList")).getText[0m
-[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
