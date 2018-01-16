@@ -10,6 +10,7 @@ General Guidance:
 	- Where instructions are vague, reasonable assumptions should be made and documented.
 
 	The app can be run using the run_app.sh file and will be accessible from localhost:8090.
+	These tests will need to be implemented in the QA_Test project and should follow similiar patterns to those already present in the tests.
 
 Task 1:
 		GIVEN I am a user
@@ -20,6 +21,8 @@ Task 2:
 		AND I have been provided the endpoint spec for the create event endpoint
 		WHEN I provide 5 different combinations of event details to the create event endpoint
 		THEN I want these details to be visible on the index page
+
+		For this test please create the 5 sets of data you wish to use.
 
 		A basic spec for the create event endpoint follows:
 		URL: 
@@ -51,8 +54,3 @@ Task 3:
 			- {If this is a manual test please outline all steps taken from a fresh instance of the application to create this error}
 		Version of the code the issue was found on:
 			{please use the latest git commit ID}
-		
-Task 4:
-		GIVEN I am a test
-		When I run a performance test
-		Then I want to be able to provide a breakdown of pages and areas where delays occur
