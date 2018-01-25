@@ -1,0 +1,19 @@
+@import model.ValidationException
+@(exception : Option[ValidationException] = None )(implicit text : Messages)
+@main("Event Planner - Error"){
+    <h1 class="heading-xlarge">@text("error.title")</h1>
+    @if(exception != None) {
+        <ul class="error-summary-list">
+        @for(string : String <- exception.get.errors) {
+                <li><a href="#">@string</a></li>
+        }
+
+    </ul>
+}
+    <p class="lede">
+        @text("error.text")
+    </p>
+    <p>
+        @text("contact.number")
+    </p>
+}
