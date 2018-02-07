@@ -1,5 +1,5 @@
 package model
 
-case class ValidationException(val errors : Seq[String]) extends Exception{
+case class ValidationException(val errors : String) extends Exception{
 
 }

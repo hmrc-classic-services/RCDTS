@@ -6,7 +6,7 @@
     <label class="form-element" for="@id">@Html(label)</label>
     @if(helpText.nonEmpty) {
     <span class="form-hint">
-            @Html(text("helpText"))
+            @Html(helpText)
         </span>
     }
     <span id="@id-error-message"

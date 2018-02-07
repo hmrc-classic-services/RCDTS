@@ -4,8 +4,9 @@ app.name=Event Planner
 
 contact.number=0800 RANDOM NUMBER
 
-error.title=We've encountered an unexpected issue
-error.text=We apologise for any problems this has caused. <br>Please go back and try again, if this continues please contact the help desk on :
+error.title=We have encountered an issue
+error.text=We apologise for any problems this has caused.
+error.guidance=Please go back and try again, if this continues please contact the help desk on:
 
 
 button.createEvent=Create Event

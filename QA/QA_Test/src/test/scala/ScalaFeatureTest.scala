@@ -70,7 +70,7 @@ class ScalaFeatureTest extends FeatureSpec with TestSetup with GivenWhenThen wit
       Then("the user is taken to the home page with the event details visible")
       val table = webDriver.findElement(By.id("eventList")).getText
         table contains eventName shouldBe true
-        table contains eventDate shouldBe true
+        table contains eventDate shouldBe true  
         table contains eventType shouldBe true
     }
   }

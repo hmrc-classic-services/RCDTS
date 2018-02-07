@@ -4,7 +4,7 @@
     <h1 class="heading-xlarge">@text("error.title")</h1>
     @if(exception != None) {
         <ul class="error-summary-list">
-        @for(string : String <- exception.get.errors) {
+        @for(string : String <- exception.get.errors.split(System.lineSeparator)) {
                 <li><a href="#">@string</a></li>
         }
 
@@ -12,6 +12,9 @@
 }
     <p class="lede">
         @text("error.text")
+    </p>
+    <p>
+        @text("error.guidance")
     </p>
     <p>
         @text("contact.number")

@@ -36,7 +36,7 @@ class EventController @Inject()(cc: ControllerComponents)(val text : MessagesApi
       EventOrganiser.addEvent(eventName, eventDesc, eventType, DateUtil.parse(eventDate))
       Redirect(routes.HomeController.index(Some("Event Successfully Added")))
     } catch {
-      case ex : ValidationException => Redirect(routes.ErrorController.validationException)
+      case ex : ValidationException => Redirect(routes.ErrorController.validationException(Some(ex)))
       case ex : Throwable => Redirect(routes.ErrorController.general())
     }
   }

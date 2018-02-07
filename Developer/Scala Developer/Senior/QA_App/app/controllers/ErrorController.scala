@@ -2,6 +2,7 @@ package controllers
 
 import javax.inject._
 
+import model.ValidationException
 import play.api.i18n.{I18nSupport, Messages, MessagesApi}
 import play.api.mvc._
 
@@ -12,8 +13,8 @@ class ErrorController @Inject()(cc: ControllerComponents)(implicit text: Message
     Ok(views.html.error())
   }
 
-  def validationException() =  Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.error())
+  def validationException(exception : Option[ValidationException]) =  Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.error(exception))
   }
 
 }
